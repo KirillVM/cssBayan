@@ -36,7 +36,7 @@ h1{
 
 .accordion-item{
     border-top:0.6vh solid rgba(162, 167, 176, 0.904);
-    max-height: 40vh;
+    max-height: 100vh;
     display: flex;
     flex-direction:column;
     align-items: center;
@@ -81,7 +81,8 @@ h1{
 .acc-input:checked ~ .acc-meme{
     display:block;
     transition: height 500ms cubic-bezier(.53,.54,.18,.47);
-    height:20vh;
+    height:60vh;
+    margin: 3vh;
 }
 
 .acc-input:checked ~ div .item-title,
@@ -102,8 +103,9 @@ h1{
     
     .acc-input:hover ~ .acc-meme{
         display:block;
-        transition: height 350ms cubic-bezier(.53,.54,.18,.47);
-        height:20vh;
+        transition: height 500ms cubic-bezier(.53,.54,.18,.47);
+        height:60vh;
+        margin: 3vh;
     }
 
     .accordion:hover .item-title,
