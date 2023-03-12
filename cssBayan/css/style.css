@@ -1,8 +1,10 @@
 *{
     box-sizing:border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color:rgba(27, 89, 182, 0.904);
+    color:rgb(10, 128, 183);
     margin: 3vh 0 0 0;
+    font-size: 5vh;
+    font-weight:800;
 }
 
 body{
@@ -33,7 +35,7 @@ h1{
 }
 
 .accordion-item{
-    border-top:1vh solid rgba(162, 167, 176, 0.904);
+    border-top:0.6vh solid rgba(162, 167, 176, 0.904);
     max-height: 40vh;
     display: flex;
     flex-direction:column;
@@ -66,37 +68,20 @@ h1{
 }
 
 .acc-input{
-    appearance: none;
+    display: none;
 }
 
 .acc-meme{
     height: 0vh;
 }
 
-.acc-input:hover ~ .acc-meme{
-    display:block;
-    transition: height 350ms cubic-bezier(.53,.54,.18,.47);
-    height:20vh;
-}
-
-.acc-input:hover ~ div .item-arrow,
 .acc-input:checked ~ div .item-arrow{
     transform: translateY(5vh) rotate(45deg);
 }
 
-.accordion:hover .item-title,
-.accordion:hover .item-arrow{
-    color: black;
-}
-
-.header-container:hover .item-title,
-.header-container:hover .item-arrow{
-    color: black;
-}
-
 .acc-input:checked ~ .acc-meme{
     display:block;
-    transition: height 350ms cubic-bezier(.53,.54,.18,.47);
+    transition: height 500ms cubic-bezier(.53,.54,.18,.47);
     height:20vh;
 }
 
@@ -105,4 +90,36 @@ h1{
     color:black;
 }
 
+.acc-input:checked:active ~ div .item-title,
+.acc-input:checked:active ~ div .item-arrow{
+    color: rgb(10, 128, 183)
+}
+@media (hover: hover) and (pointer: fine){
+
+    .acc-input:hover ~ div .item-arrow{
+        transform: translateY(5vh) rotate(45deg);
+        transition: 500ms ease;
+    }
+    
+    .acc-input:hover ~ .acc-meme{
+        display:block;
+        transition: height 350ms cubic-bezier(.53,.54,.18,.47);
+        height:20vh;
+    }
+
+    .accordion:hover .item-title,
+    .accordion:hover .item-arrow{
+        color: black;
+    }
+
+    .header-container:hover .item-title,
+    .header-container:hover .item-arrow{
+        color: black;
+    }
+    .acc-input:hover:active ~ div .item-title,
+    .acc-input:hover:active ~ div .item-arrow{
+        color: rgb(10, 128, 183)
+    }
+
+}
 
