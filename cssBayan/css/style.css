@@ -3,7 +3,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color:rgb(10, 128, 183);
     margin: 3vh 0 0 0;
-    font-size: 5vh;
+    font-size: 3vh;
     font-weight:800;
 }
 
@@ -64,7 +64,6 @@ h1{
     padding: 0.5%;
     margin: 0.5%;
     transform: translateY(5vh) rotate(-135deg);
-
 }
 
 .acc-input{
@@ -121,5 +120,17 @@ h1{
         color: rgb(10, 128, 183)
     }
 
+}
+
+@media all and (min-width: 821px){
+    *{
+        font-size: 5vh;
+    }
+    .item-arrow{
+        display: none;
+    }
+    .accordion:hover .item-arrow{
+        display:inline-block;
+    }
 }
 
